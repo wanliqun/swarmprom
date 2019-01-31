@@ -93,7 +93,7 @@
       "thresholds": "",
       "timeFrom": "1m",
       "timeShift": null,
-      "title": "Uptime",
+      "title": "在线时长",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -176,7 +176,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Nodes",
+      "title": "节点数",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -262,7 +262,7 @@
       "thresholds": "",
       "timeFrom": "1m",
       "timeShift": null,
-      "title": "CPUs",
+      "title": "CPU数量",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -348,7 +348,7 @@
       "thresholds": "10,25,100",
       "timeFrom": "1m",
       "timeShift": null,
-      "title": "CPU Idle",
+      "title": "CPU空置率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -413,7 +413,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "System Load by Node",
+      "title": "节点系统负载",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -503,7 +503,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "CPU Usage by Node",
+      "title": "节点CPU使用率",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -614,7 +614,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Total Memory",
+      "title": "总共内存大小",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -696,7 +696,7 @@
         }
       ],
       "thresholds": "10,25,100",
-      "title": "Available Memory",
+      "title": "可用内存空间率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -782,7 +782,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Total swap memory used",
+      "title": "交换内存使用空间",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -864,7 +864,7 @@
         }
       ],
       "thresholds": "5,10,100",
-      "title": "Used swap memory",
+      "title": "交换内存使用率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -946,7 +946,7 @@
         }
       ],
       "thresholds": "5,10,100",
-      "title": "Swap used / total RAM memory ratio",
+      "title": "使用交换内存占总RAM内存比率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1032,7 +1032,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Total Disk Space",
+      "title": "总磁盘空间",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1114,7 +1114,7 @@
         }
       ],
       "thresholds": "10,25,100",
-      "title": "Available Disk Space",
+      "title": "磁盘空间可用率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1184,7 +1184,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Memory usage by Node",
+      "title": "节点内存使用",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1271,7 +1271,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Swap memory usage by Node",
+      "title": "节点交换内存使用",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1367,7 +1367,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Disk I/O by Node",
+      "title": "节点磁盘I/O 读写",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1463,7 +1463,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "IOPS by Node",
+      "title": "节点IOPS",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1553,7 +1553,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "CPU IO Wait by Node",
+      "title": "节点CPU IO 阻塞",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -1645,7 +1645,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Running Containers by Service",
+      "title": "服务运行容器",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -1751,7 +1751,7 @@
         }
       ],
       "thresholds": "",
-      "title": "Total Containers",
+      "title": "容器总数",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1823,7 +1823,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Containers Network Traffic by Node",
+      "title": "节点容器网络流量",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1912,7 +1912,7 @@
         }
       ],
       "timeFrom": "1s",
-      "title": "Cluster members",
+      "title": "集群成员",
       "transform": "table",
       "type": "table"
     }
@@ -2057,7 +2057,7 @@
     ]
   },
   "timezone": "",
-  "title": "Docker Swarm Nodes",
+  "title": "节点监控",
   "uid": "BPlb-Sgik",
   "version": 3
 }

@@ -93,7 +93,7 @@
       ],
       "thresholds": "",
       "timeFrom": "1m",
-      "title": "Nodes",
+      "title": "节点数",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -178,7 +178,7 @@
       ],
       "thresholds": "",
       "timeFrom": "1m",
-      "title": "Stacks",
+      "title": "服务栈数量",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -263,7 +263,7 @@
       "thresholds": "",
       "timeFrom": "1m",
       "timeShift": null,
-      "title": "Services",
+      "title": "服务数量",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -347,7 +347,7 @@
       ],
       "thresholds": "",
       "timeFrom": "1m",
-      "title": "Containers",
+      "title": "容器数量",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -414,7 +414,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Service Tasks",
+      "title": "服务任务数量",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -510,7 +510,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Health Checks",
+      "title": "健康检查",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -598,7 +598,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "CPU usage by Service",
+      "title": "服务CPU使用率",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -705,7 +705,7 @@
       "thresholds": "10,25,100",
       "timeFrom": "1m",
       "timeShift": null,
-      "title": "CPU Idle",
+      "title": "CPU空置率",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -772,7 +772,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "CPU usage by Container (top 10)",
+      "title": "容器CPU使用率（top 10）",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -865,7 +865,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Memory usage by Service",
+      "title": "服务内存使用率",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -968,7 +968,7 @@
         }
       ],
       "thresholds": "10,25,100",
-      "title": "Available Memory",
+      "title": "可用内存百分比",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1034,7 +1034,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Memory usage by Container (top 10)",
+      "title": "容器内存使用率（top 10）",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -1119,7 +1119,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Network received by Service",
+      "title": "服务网络下行速率",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1205,7 +1205,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Network transmitted by Service",
+      "title": "服务网络上行速率",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1294,7 +1294,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Cluster Network Traffic",
+      "title": "集群网络流量",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1385,7 +1385,7 @@
       "thresholds": [],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Cluster IOPS",
+      "title": "集群 IOPS",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1488,7 +1488,7 @@
         }
       ],
       "thresholds": "10,25,100",
-      "title": "Available Disk Space",
+      "title": "可用磁盘空间",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1499,245 +1499,6 @@
         }
       ],
       "valueName": "avg"
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "decimals": 0,
-      "fill": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 0,
-        "y": 60
-      },
-      "id": 29,
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "sum(engine_daemon_container_actions_seconds_count * on(instance) group_left(node_id) swarm_node_info{node_id=~\"$node_id\"})  by (action)",
-          "format": "time_series",
-          "intervalFactor": 10,
-          "legendFormat": "{{action }}",
-          "refId": "A",
-          "step": 10
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Docker Daemon Container Actions",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ]
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "decimals": 0,
-      "fill": 1,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 12,
-        "y": 60
-      },
-      "id": 30,
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "sum(engine_daemon_network_actions_seconds_count * on(instance) group_left(node_id) swarm_node_info{node_id=~\"$node_id\"})  by (action)",
-          "format": "time_series",
-          "intervalFactor": 10,
-          "legendFormat": "{{action }}",
-          "refId": "A",
-          "step": 10
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Docker Daemon Network Actions",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ]
-    },
-    {
-      "columns": [
-        {
-          "text": "Avg",
-          "value": "avg"
-        }
-      ],
-      "datasource": null,
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 67
-      },
-      "hideTimeOverride": true,
-      "id": 28,
-      "links": [],
-      "pageSize": null,
-      "repeat": null,
-      "scroll": true,
-      "showHeader": true,
-      "sort": {
-        "col": 0,
-        "desc": true
-      },
-      "styles": [
-        {
-          "alias": "Time",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "pattern": "Time",
-          "type": "date"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "decimals": 2,
-          "pattern": "/.*/",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
-        }
-      ],
-      "targets": [
-        {
-          "expr": "sum(engine_daemon_engine_info * on(instance) group_left(node_id) swarm_node_info) by (kernel, os, graphdriver, version, node_id)",
-          "format": "table",
-          "intervalFactor": 2,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 2
-        }
-      ],
-      "timeFrom": "1s",
-      "title": "Docker Engine Info",
-      "transform": "timeseries_to_rows",
-      "type": "table"
     }
   ],
   "refresh": "30s",
@@ -1878,7 +1639,7 @@
     ]
   },
   "timezone": "",
-  "title": "Docker Swarm Services",
+  "title": "服务监控",
   "uid": "zr_baSRmk",
   "version": 1
 }
